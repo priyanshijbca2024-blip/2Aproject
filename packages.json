@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   {
     "id": "coaching",
@@ -39,3 +40,46 @@
     "longDescription": "Focus on yourself, develop positive habits and work towards becoming the best version of yourself."
   }
 ]
+=======
+[
+  {
+    "id": "coaching",
+    "title": "1:1 Coaching",
+    "price": 80,
+    "description": "Aut rerum necessi autem aut officiis tatibus saepe.",
+    "duration": "40 MIN",
+    "image": "images/product1.jpg",
+    "longDescription": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus."
+  },
+  {
+    "id": "couples-guidance",
+    "title": "Couple’s Guidance",
+    "price": 60,
+    "description": "Officiis debitis aut rerum necessi tatibus saepe.",
+    "duration": "35 MIN",
+    "category": "Coaching",
+    "image": "images/product2.jpg",
+    "longDescription": "Couple’s Guidance helps couples understand each other better and build a stronger relationship."
+  },
+  {
+    "id": "discovery-session",
+    "title": "Discovery Session",
+    "price": 80,
+    "description": "Lorem ipsum dolor sit amet, elit necessi tatibus saepe.",
+    "duration": "60 MIN",
+    "category": "Coaching",
+    "image": "images/product3.jpg",
+    "longDescription": "Discover your goals, understand your strengths and explore new possibilities."
+  },
+  {
+    "id": "self-improvement",
+    "title": "Self-Improvement",
+    "price": 90,
+    "description": "Autem quibusdam et aut officiis debitis aut rerum necessi.",
+    "duration": "45 MIN",
+    "category": "Coaching",
+    "image": "images/product4.jpg",
+    "longDescription": "Focus on yourself, develop positive habits and work towards becoming the best version of yourself."
+  }
+]
+>>>>>>> origin/main

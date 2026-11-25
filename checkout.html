@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <!doctype html>
@@ -382,3 +383,389 @@
     <script src="js/product.js"></script>
   </body>
 </html>
+=======
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic HTML settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page title -->
+    <title>Checkout | Life Coach</title>
+
+    <!-- Bootstrap CSS for responsive layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+   <!--------------------------- Navbar -------------------->
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white;" style="min-height: 85px;">
+
+        <div class="container">
+
+            <!-- Logo -->
+             <a class="navbar-logo ms-2 align-items-center" href="Home-1.html">
+
+                <img  src="images/flower-logo-img.png" alt="flower logo" style="height: 4rem;">
+
+            </a>
+
+          <!-- Mobile Menu Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+        
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+            
+              <!-- Nav Links -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="About-2.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="Work_with_me.html">Work With Me</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="Books-4.html">Books</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="contact-5.html">Contact</a>
+                    </li>
+               <!-- Cart -->
+                 <div class="header-cart">
+                <button class="btn d-flex align-items-center ms-lg-3"
+                   id="openCart">
+
+                 <span class="fw-semibold price" id="headerTotal"> £0.00 </span>
+                  <span class="ms-2 price fa-solid fa-bag-shopping" style="font-size: 20px;"></span>
+                 <span
+                      id="cartCount"
+                                 class=" badge rounded-pill bg-success"> 0
+                            </span>
+                </button>
+                </div>
+        </div>
+     </nav>
+</header>
+
+    <!-- ================= MAIN CHECKOUT SECTION ================= -->
+    <main class="container checkout-page">
+      <!-- Page Heading -->
+      <h1>Checkout</h1>
+
+      <!-- ================= COUPON SECTION ================= -->
+
+      <div class="checkout-coupon">
+        <!-- Link to display coupon input field -->
+        <span>
+          Have a coupon?
+
+          <button id="toggleCheckoutCoupon" type="button">
+            Click here to enter your code
+          </button>
+        </span>
+
+        <!-- Coupon Form (Initially Hidden) -->
+        <div id="checkoutCouponForm" class="coupon-area d-none">
+          <!-- Enter coupon code -->
+          <input id="checkoutCoupon" type="text" placeholder="Coupon code" />
+
+          <!-- Apply Coupon Button -->
+          <button id="applyCheckoutCoupon" class="primary-button" type="button">
+            Apply coupon
+          </button>
+
+          <!-- Displays coupon success or error message -->
+          <span id="checkoutCouponMessage" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <!-- ================= CHECKOUT ERROR MESSAGE ================= -->
+
+      <!-- Displays error if payment method is invalid -->
+      <div id="checkoutError" class="checkout-error d-none">
+        <i class="bi bi-exclamation-circle-fill"></i>
+        Invalid payment method.
+      </div>
+
+      <!-- ================= CHECKOUT COLUMNS ================= -->
+
+      <div class="row g-5 checkout-columns">
+        <!-- ================= LEFT SIDE: BILLING DETAILS ================= -->
+        <section class="col-lg-7">
+          <h2 class="form-section-title">Billing details</h2>
+
+          <!-- Customer Billing Form -->
+          <form id="checkoutForm">
+            <div class="row g-3">
+              <!-- First Name -->
+              <div class="col-md-6">
+                <label for="firstName"> First name <b>*</b> </label>
+
+                <input id="firstName" name="firstName" required />
+              </div>
+
+              <!-- Last Name -->
+              <div class="col-md-6">
+                <label for="lastName"> Last name <b>*</b> </label>
+
+                <input id="lastName" name="lastName" required />
+              </div>
+
+              <!-- Company Name (Optional) -->
+              <div class="col-12">
+                <label for="company"> Company name (optional) </label>
+
+                <input id="company" name="company" />
+              </div>
+
+              <!-- Country Selection -->
+              <div class="col-12">
+                <label for="country"> Country / Region <b>*</b> </label>
+
+                <select id="country" name="country" required>
+                  <option>India</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                </select>
+              </div>
+
+              <!-- Street Address -->
+              <div class="col-12">
+                <label for="street"> Street address <b>*</b> </label>
+
+                <!-- House number and street name -->
+                <input
+                  id="street"
+                  name="street"
+                  placeholder="House number and street name"
+                  required
+                />
+
+                <!-- Additional address details (Optional) -->
+                <input
+                  class="mt-2"
+                  id="street2"
+                  name="street2"
+                  placeholder="Apartment, suite, unit, etc. (optional)"
+                />
+              </div>
+
+              <!-- Town / City -->
+              <div class="col-12">
+                <label for="city"> Town / City <b>*</b> </label>
+
+                <input id="city" name="city" required />
+              </div>
+
+              <!-- State Selection -->
+              <div class="col-12">
+                <label for="state"> State <b>*</b> </label>
+
+                <select id="state" name="state" required>
+                  <option value="">Select an option...</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Delhi</option>
+                  <option>Maharashtra</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Rajasthan</option>
+                  <option>Gujarat</option>
+                  <option>Karnataka</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <!-- PIN Code -->
+              <div class="col-12">
+                <label for="pin"> PIN Code <b>*</b> </label>
+
+                <input id="pin" name="pin" inputmode="numeric" required />
+              </div>
+
+              <!-- Phone Number -->
+              <div class="col-12">
+                <label for="phone"> Phone <b>*</b> </label>
+
+                <input id="phone" name="phone" type="tel" required />
+              </div>
+
+              <!-- Email Address -->
+              <div class="col-12">
+                <label for="email"> Email address <b>*</b> </label>
+
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+
+            <!-- ================= ADDITIONAL INFORMATION ================= -->
+
+            <h2 class="form-section-title additional-title">
+              Additional information
+            </h2>
+
+            <!-- Optional Order Notes -->
+            <label for="orderNotes"> Order notes (optional) </label>
+
+            <textarea
+              id="orderNotes"
+              name="orderNotes"
+              rows="3"
+              placeholder="Notes about your order, e.g. special notes for delivery."
+            ></textarea>
+          </form>
+        </section>
+
+        <!-- ================= RIGHT SIDE: ORDER SUMMARY ================= -->
+        <aside class="col-lg-5">
+          <div class="order-box">
+            <h2>Your order</h2>
+
+            <!-- Order Table Heading -->
+            <div class="order-head">
+              <strong>Product</strong>
+              <strong>Subtotal</strong>
+            </div>
+
+            <!-- Products are dynamically displayed here using JavaScript -->
+            <div id="checkoutOrderItems"></div>
+
+            <!-- Displays Subtotal -->
+            <div class="total-line">
+              <span>Subtotal</span>
+              <strong id="checkoutSubtotal">£0.00</strong>
+            </div>
+
+            <!-- Displays Final Total Amount -->
+            <div class="total-line">
+              <span>Total</span>
+              <strong id="checkoutTotal">£0.00</strong>
+            </div>
+
+            <!-- ================= PAYMENT METHOD SECTION ================= -->
+
+            <!-- Payment method unavailable message -->
+            <div class="payment-unavailable">
+              <i class="bi bi-square"></i>
+
+              <span>
+                Sorry, it seems that there are no available payment methods.
+                Please contact us if you require assistance or wish to make
+                alternate arrangements.
+              </span>
+            </div>
+
+            <!-- ================= PRIVACY POLICY SECTION ================= -->
+
+            <p class="privacy-copy">
+              Your personal data will be used to process your order, support
+              your experience throughout this website, and for other purposes
+              described in our
+
+              <a href="#privacy">privacy policy</a>.
+            </p>
+
+            <!-- ================= PLACE ORDER BUTTON ================= -->
+
+            <!-- Submits the checkout form -->
+            <button
+              class="primary-button full-width place-order"
+              id="placeOrder"
+              type="submit"
+              form="checkoutForm"
+            >
+              Place order
+            </button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- ================= CART SIDEBAR SECTION ================= -->
+
+    <!-- Background overlay shown when cart sidebar opens -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Shopping Cart Sidebar -->
+    <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+      <!-- Sidebar Header -->
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+
+        <!-- Close Sidebar Button -->
+        <button
+          class="cart-close"
+          id="closeCart"
+          type="button"
+          aria-label="Close cart"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Sidebar Product List -->
+      <div class="cart-body" id="cartItems">
+        <!-- Default message when cart is empty -->
+        <p class="empty-cart">No products in the cart.</p>
+      </div>
+
+      <!-- Sidebar Footer -->
+      <div class="cart-footer">
+        <!-- Displays Cart Subtotal -->
+        <div class="subtotal-row">
+          <strong>Subtotal:</strong>
+          <strong id="cartSubtotal">£0.00</strong>
+        </div>
+
+        <!-- Redirects to Cart Page -->
+        <a href="cart.html" class="primary-button full-width"> View cart </a>
+
+        <!-- Redirects to Checkout Page -->
+        <a href="checkout.html" class="primary-button full-width"> Checkout </a>
+      </div>
+    </aside>
+
+    <!-- ================= JAVASCRIPT FILE ================= -->
+
+    <!-- External JavaScript handles:
+       1. Displaying cart products
+       2. Displaying order summary
+       3. Applying coupon codes
+       4. Calculating subtotal and total
+       5. Cart sidebar functionality
+       6. Checkout form submission
+       7. Order processing
+  -->
+
+    <script src="js/product.js"></script>
+  </body>
+</html>
+>>>>>>> origin/main
