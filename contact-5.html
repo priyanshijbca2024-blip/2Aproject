@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Life Coach Website</title>
+
+   
+
+
+     
+  <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+<!--Font Awesome -->
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+  <body>
+
+
+<!--------------------------- Navbar -------------------->
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white;" style="min-height: 85px;">
+
+        <div class="container">
+
+            <!-- Logo -->
+             <a class="navbar-logo ms-2 align-items-center" href="Home-1.html">
+
+                <img  src="images/flower-logo-img.png" alt="flower logo" style="height: 4rem;">
+
+            </a>
+
+          <!-- Mobile Menu Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+        
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+            
+              <!-- Nav Links -->
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="About-2.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="Work_with_me.html">Work With Me</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="Books-4.html">Books</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#">Contact</a>
+                    </li>
+               <!-- Cart -->
+                <button class="btn d-flex align-items-center ms-lg-3"
+                   id="openCart">
+
+                 <span class="fw-semibold price"> £0.00 </span>
+                  <span class="ms-2 price fa-solid fa-bag-shopping" style="font-size: 20px;"></span>
+                 <span
+                      id="cartCount"
+                                 class=" badge rounded-pill bg-success">
+                                0
+                            </span>
+                </button>
+        </div>
+     </nav>
+</header>
+
+
+
+<!-- =====================================
+       4. CART BACKGROUND OVERLAY
+       ===================================== -->
+
+    <!-- Overlay appears when shopping cart is opened -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- =====================================
+       5. SHOPPING CART SIDEBAR
+       ===================================== -->
+
+    <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+
+        <!-- Close Cart Button -->
+        <button
+          class="cart-close"
+          id="closeCart"
+          type="button"
+          aria-label="Close cart"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Cart Products Section -->
+      <div class="cart-body" id="cartItems">
+        <!-- Default Message When Cart Is Empty -->
+        <p class="empty-cart">No products in the cart.</p>
+      </div>
+
+      <!-- Cart Footer -->
+      <div class="cart-footer">
+        <!-- Cart Subtotal -->
+        <div class="subtotal-row">
+          <strong>Subtotal:</strong>
+
+          <strong id="cartSubtotal">£0.00</strong>
+        </div>
+
+        <!-- View Cart Page Button -->
+        <a href="cart.html" class="primary-button full-width"> View cart </a>
+
+        <!-- Checkout Page Button -->
+        <a href="checkout.html" class="primary-button full-width"> Checkout </a>
+      </div>
+    </aside>
+
+
+
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="row align-items-start">
+
+
+            <!-- ================= LEFT SIDE ================= -->
+
+            <div class="col-lg-4 contact-left">
+
+
+                <!-- Small Line -->
+
+                <div class="contact-line"></div>
+
+
+                <!-- Heading -->
+
+                 <h1 class="contact-title">
+                    Contact
+                </h1>
+
+
+                <!-- Address -->
+
+                <p class="contact-address">
+                    At vero eos et Paccusamus 20 4030 Puna ST
+                    <br>
+                    123
+                </p>
+
+
+                <!-- Telephone -->
+
+                <div class="contact-phone">
+
+                    <p class="mb-0">
+                        Tel: 123 456 7890
+                    </p>
+
+                    <p class="mb-0">
+                        Fax: 123 456 7890
+                    </p>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <p class="contact-email">
+                    info@example.com
+                </p>
+
+
+                <!-- Social Icons -->
+
+                <div class="social-icon d-flex align-items-center">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= RIGHT SIDE ================= -->
+
+            <div class="col-lg-8">
+
+
+                <div class="contact-form-box">
+
+
+                    <form id="contactForm">
+
+
+                        <!-- First Name -->
+
+                        <div class="mb-5">
+
+                            <label for="firstName" class="form-label">
+                                First Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="firstName"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- Last Name -->
+
+                        <div class="mb-5">
+
+                            <label for="lastName" class="form-label">
+                                Last Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="lastName"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- Email -->
+
+                        <div class="mb-5">
+
+                            <label for="email" class="form-label">
+                                Your Email <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <!-- Message -->
+
+                        <div class="mb-5">
+
+                            <label for="message" class="form-label">
+                                Your Message
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                rows="5"
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <!-- Reminder -->
+
+                        <div class="mb-4">
+
+                            <label class="reminder-label">
+                                The mandated reminder that I am...
+                                <span>*</span>
+                            </label>
+
+
+                            <div class="row g-2"> 
+
+
+                                <!-- Loved -->
+
+                                 <div class="col-md-4">
+
+                                    <label class="reminder-box">
+
+                                        <span>
+                                            Loved
+                                        </span>
+
+                                        <input type="checkbox" name="reminder" value="Loved">
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- Special -->
+
+                                 <div class="col-md-4">
+
+                                    <label class="reminder-box">
+
+                                        <span>
+                                            Special
+                                        </span>
+                            <input type="checkbox" name="reminder" value="Special">
+                                        
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <!-- Resilient -->
+
+                                <div class="col-md-4">
+
+                                    <label class="reminder-box">
+
+                                        <span>
+                                            Resilient
+                                        </span>
+
+                               <input type="checkbox" name="reminder" value="Resilient">
+
+                                    </label>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Submit -->
+
+                        <button
+                            type="submit"
+                            class="btn submit-btn btn-success"
+                        >
+                            Submit
+                        </button>
+
+
+                    </form>
+
+                    
+         <!-------------------------- after form fill --------------------------------------->
+
+    <!-- Success Message -->
+
+<div id="successcontent" class="success-content" style="display: none;">
+
+    <i class="bi bi-check-circle"></i>
+
+    <h3>Thank you</h3>
+
+    <p>
+        Your form has been submitted successfully. We'll review your details and get
+        <br>
+         back to you soon.
+    </p>
+
+</div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<!--------------------------- Newsletter Section --------------------------->
+
+    <section class="Newsletter-section">
+
+        <div class="container-fluid mx-auto">
+
+            <div class="row newsletter-row">
+
+           <!-- LEFT SIDE -->
+
+                <div class="col-lg-4 newsletter-left">
+
+                    <!-- Heading -->
+                    <h2> Subscribe To My Newsletter </h2>
+
+                    <!-- Description -->
+                    <p class="newspara" >  
+                        Consider subscribing if you don’t want to miss it
+                        <br>
+                         when new posts go up!!
+                    </p>
+          
+                    <!-- Social Icons -->
+                    <div class="social-icons align-items-center d-flex mt-4" style="gap: 20px;">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-google"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+          <!-- RIGHT SIDE -->
+                <div class="col-lg-8 newsletter-right">
+
+                    <form id="newsletterForm">
+
+            <!-- Name -->
+
+       <div class="mb-4">
+
+           <label for="name" class="form-label">Name 
+            <span>*</span>  
+         </label>
+
+         <input type="text" id="name" class="form-control1" required>
+
+        </div>
+
+       <!-- Last Name -->
+
+       <div class="mb-4">
+        
+           <label for="lastName" class="form-label">Last Name 
+            <span>*</span>  
+         </label>
+
+         <input type="text" id="lastName" class="form-control1" required>
+
+        </div>
+
+           <!-- Email -->
+
+       <div class="mb-4">
+        
+           <label for="email" class="form-label">Email Address
+            <span>*</span>  
+         </label>
+
+         <input type="email" id="email" class="form-control1" required>
+
+        </div>
+
+         <!-- Checkbox Heading -->
+
+           <label class="form-label checkbox-heading">
+
+            I want to subscribe because... 
+            <span>*</span>
+
+            </label>
+
+
+    <!-- Checkbox Options -->
+                
+     <div class="row g-2" style="width: 97%;">
+
+         <!-- Option 1 -->
+
+        <div class="col-md-6">
+
+        <label class="reason-box">
+                    <span>
+                        I want to find my heckin happy!
+                    </span>
+            <input type="checkbox" name="reason" value="happy" class="custom-checkbox">
+           
+         
+
+            </label>
+
+    </div>
+
+      <!-- Option 2 -->
+
+        <div class="col-md-6">
+
+        <label class="reason-box">
+                    <span>
+                            Happiness Compass is relatable
+                    </span>
+            <input type="checkbox" name="reason" value="compass" class="custom-checkbox">
+           
+           
+
+            </label>
+
+    </div>
+
+
+    
+      <!-- Option 3 -->
+
+    <div class="col-md-6">
+
+    <label class="reason-box">
+        <span>
+             I enjoy getting new tips, tricks and tools
+             <br> to implement for my best life
+        </span>
+        
+        <input type="checkbox" name="reason" value="tips" class="custom-checkbox">
+           
+        
+
+         </label>
+
+    </div>
+
+</div>
+
+     <!-- Submit -->
+     <button 
+
+         type="submit" class="btn btn-success submit-button"> SUBMIT
+
+    </button>
+
+           </form>
+
+
+
+            <!-------------------------- after form fill --------------------------------------->
+
+    <!-- Success Message -->
+
+<div id="successMessage" class="success-message" style="display: none;">
+
+    <i class="bi bi-check-circle"></i>
+
+    <h3>Thank you</h3>
+
+    <p>
+        Your form has been submitted successfully.
+        We'll review your details and get back to you soon.
+    </p>
+
+</div>
+
+
+         </div>
+
+      </div>
+
+    </div>
+
+   
+
+  </section>
+
+</main>
+
+
+  <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer class="footer-section">
+
+        <div class="container-fluid footer-container">
+
+            <div class="row align-items-center">
+
+                <!-- Copyright -->
+                <div class="col-md-6">
+
+                    <p class="mb-0">
+                        Copyright © 2026 Life Coach
+                    </p>
+
+                </div>
+
+
+                <!-- Powered -->
+                <div class="col-md-6 text-md-end">
+
+                    <p class="mb-0">
+                        Powered by Life Coach
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- External JS -->
+
+ <script src="js/product.js"></script>
+
+ <script src="js/contact.js"></script>
+</body>
+
+</html>
