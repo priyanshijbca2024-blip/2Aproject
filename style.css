@@ -45,190 +45,7 @@
   color: var(--green-clr);
 }
 
-/* ------- 1. CART OVERLAY AND SIDEBAR --------- */
 
-/* Background overlay behind cart sidebar */
-.cart-overlay {
-  position: fixed;
-  inset: 0;
-  background: #0006;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.25s;
-}
-
-/* Show overlay when cart is active */
-.cart-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Shopping cart sidebar */
-.cart-sidebar {
-  position: fixed;
-  top: 0;
-  right: -520px;
-  width: 500px;
-  max-width: 100%;
-  height: 100vh;
-  background: #fff;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s ease;
-}
-
-/* Open cart sidebar */
-.cart-sidebar.active {
-  right: 0;
-}
-
-/* Cart sidebar header */
-.cart-header {
-  padding: 20px 22px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Cart heading */
-.cart-header h2 {
-  font-size: 19px;
-  margin: 0;
-}
-
-/* Close cart button */
-.cart-close {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  background: #fff;
-  font-size: 25px;
-  line-height: 1;
-}
-
-/* Cart sidebar body */
-.cart-body {
-  padding: 18px 22px;
-  flex: 1;
-  overflow-y: auto;
-}
-
-/* Empty cart message */
-.empty-cart {
-  text-align: center;
-  color: #777;
-  padding: 35px 0;
-}
-
-/* -------- 2. CART ITEM STYLING ---------- */
-
-/* Individual cart item layout */
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Cart product image */
-.cart-item-image {
-  width: 66px;
-  height: 66px;
-  object-fit: cover;
-}
-
-/* Cart product information */
-.cart-item-info {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Cart product name */
-.cart-item-info h3 {
-  font-size: 16px;
-  margin: 0 0 6px;
-}
-
-/* Cart product details */
-.cart-item-info p {
-  margin: 0 0 4px;
-  color: #777;
-}
-
-/* Cart product price */
-.cart-item-info strong {
-  font-size: 14px;
-}
-
-/* Remove cart item button */
-.remove-cart-item {
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  line-height: 18px;
-  font-size: 19px;
-}
-
-/* ----- 3. CART FOOTER AND NOTIFICATIONS ----- */
-
-/* Cart sidebar footer */
-.cart-footer {
-  margin-top: 350px;
-  border-top: 1px solid #ddd;
-  padding: 18px 22px 22px;
-}
-
-/* Subtotal row */
-.subtotal-row {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 17px;
-  margin-bottom: 17px;
-}
-
-/* Full width button */
-.full-width {
-  display: flex;
-  width: 100%;
-  margin-top: 12px;
-}
-
-/* Cart notification box */
-.cart-notice {
-  border: 1px solid #087b35;
-  border-top: 3px solid #087b35;
-  padding: 18px 22px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  background: #fff;
-}
-
-/* Notification icon */
-.cart-notice i {
-  color: #087b35;
-  margin-right: 8px;
-}
-
-/* Hide elements when required */
-.d-none {
-  display: none !important;
-}
-
-/* Empty state message */
-.empty-state {
-  padding: 50px 15px;
-  text-align: center;
-}
 
 /* ---------------------- Hero section -------------------- */
 
@@ -1068,7 +885,7 @@ h6 {
 
 .product-tabs {
   background-color: var(--warmwhite-clr);
-  padding-top: 0;
+  padding: 0px 11%;
 }
 
 .tab-buttons {
@@ -1076,7 +893,6 @@ h6 {
   align-items: center;
   gap: 22px;
   border-top: 1px solid #ddd;
-  margin-bottom: 30px;
 }
 
 .tab-button {
@@ -1085,7 +901,7 @@ h6 {
   border: none;
   background: transparent;
   color: #343d46;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
 }
@@ -1104,10 +920,12 @@ h6 {
   background-color: #007527;
 }
 
-.tab-content-box {
+.tab-content-box p{
   font-size: 17px;
   line-height: 1.8;
   color: #343d46;
+  padding-bottom:20px;
+  margin-bottom:0px
 }
 
 /* =====================================
@@ -1116,14 +934,14 @@ h6 {
 
 .related-section {
   background-color: var(--warmwhite-clr);
-  padding: 0px 20% 110px 10%;
+  padding: 40px 30% 110px 11%;
 }
 
 .related-section h2 {
   font-size: 44px;
   font-weight: 600;
   color: #080808;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
 }
 
 #relatedProducts {
@@ -1152,7 +970,11 @@ h6 {
   font-weight: 600;
   color: #343d46;
 }
-
+#relatedProducts span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #343d46;
+}
 #relatedProducts p {
   font-size: 16px;
   line-height: 1.8;
@@ -1163,6 +985,7 @@ h6 {
   font-size: 16px;
   font-weight: 600;
 }
+
 
 /* =====================================
    IMAGE ZOOM MODAL
@@ -1264,617 +1087,949 @@ h6 {
   margin-right: 5px;
 }
 
-/* ====================== &&&&&&&&&&&&&&================= */
+
+
+
+
 
 /* =========================================
-   9. CART OVERLAY AND SIDEBAR
-   ========================================= */
+   CHECKOUT PAGE
+========================================= */
 
-/* Background overlay behind cart sidebar */
-.cart-overlay {
-  position: fixed;
-  inset: 0;
-  background: #0006;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.25s;
-}
-
-/* Show overlay when cart is active */
-.cart-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Shopping cart sidebar */
-.cart-sidebar {
-  position: fixed;
-  top: 0;
-  right: -520px;
-  width: 500px;
-  max-width: 100%;
-  height: 100vh;
-  background: #fff;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s ease;
-}
-
-/* Open cart sidebar */
-.cart-sidebar.active {
-  right: 0;
-}
-
-/* Cart sidebar header */
-.cart-header {
-  padding: 20px 22px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Cart heading */
-.cart-header h2 {
-  font-size: 19px;
-  margin: 0;
-}
-
-/* Close cart button */
-.cart-close {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  background: #fff;
-  font-size: 25px;
-  line-height: 1;
-}
-
-/* Cart sidebar body */
-.cart-body {
-  padding: 18px 22px;
-  flex: 1;
-  overflow-y: auto;
-}
-
-/* Empty cart message */
-.empty-cart {
-  text-align: center;
-  color: #777;
-  padding: 35px 0;
-}
-
-/* =========================================
-   10. CART ITEM STYLING
-   ========================================= */
-
-/* Individual cart item layout */
-.cart-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-/* Cart product image */
-.cart-item-image {
-  width: 66px;
-  height: 66px;
-  object-fit: cover;
-}
-
-/* Cart product information */
-.cart-item-info {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Cart product name */
-.cart-item-info h3 {
-  font-size: 16px;
-  margin: 0 0 6px;
-}
-
-/* Cart product details */
-.cart-item-info p {
-  margin: 0 0 4px;
-  color: #777;
-}
-
-/* Cart product price */
-.cart-item-info strong {
-  font-size: 14px;
-}
-
-/* Remove cart item button */
-.remove-cart-item {
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  line-height: 18px;
-  font-size: 19px;
-}
-
-/* =========================================
-   11. CART FOOTER AND NOTIFICATIONS
-   ========================================= */
-
-/* Cart sidebar footer */
-.cart-footer {
-  margin-top: 350px;
-  border-top: 1px solid #ddd;
-  padding: 18px 22px 22px;
-}
-
-/* Subtotal row */
-.subtotal-row {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 17px;
-  margin-bottom: 17px;
-}
-
-/* Full width button */
-.full-width {
-  display: flex;
-  width: 100%;
-  margin-top: 12px;
-}
-
-/* Cart notification box */
-.cart-notice {
-  border: 1px solid #087b35;
-  border-top: 3px solid #087b35;
-  padding: 18px 22px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  background: #fff;
-}
-
-/* Notification icon */
-.cart-notice i {
-  color: #087b35;
-  margin-right: 8px;
-}
-
-/* Hide elements when required */
-.d-none {
-  display: none !important;
-}
-
-/* Empty state message */
-.empty-state {
-  padding: 50px 15px;
-  text-align: center;
-}
-
-/* * =========================================
-   13. FULL CART AND CHECKOUT PAGES
-   ========================================= */
-*/
-
-/* Main cart and checkout page layout */
-.shop-page,
 .checkout-page {
-  max-width: 1380px;
-  padding-top: 62px;
-  padding-bottom: 80px;
+    padding: 65px 11% 80px;
+    background-color: #f5f8f5;
 }
 
-/* Cart and checkout page headings */
-.shop-page > h1,
-.checkout-page > h1 {
-  font-size: 34px;
-  font-weight: 400;
-  margin-bottom: 24px;
-  color: #111;
+.checkout-page h1 {
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: #111;
 }
 
-/* =========================================
-   14. CART TABLE
-   ========================================= */
+/* Coupon Section */
 
-/* Cart table outer border */
-.cart-table-wrap {
-  border: 1px solid #ddd;
-}
-
-/* Main cart table */
-.cart-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 760px;
-}
-
-/* Cart table headings */
-.cart-table th {
-  background: #fbfbfb;
-  font-weight: 700;
-  text-align: center;
-  padding: 17px 12px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Cart table cells */
-.cart-table td {
-  padding: 13px 12px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* Remove bottom border from last row */
-.cart-table tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-/* Product image in cart page */
-.cart-page-image {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-}
-
-/* Product name in cart page */
-.cart-product-name {
-  color: #07803a;
-}
-
-/* Cart quantity input */
-.cart-page-quantity {
-  width: 64px;
-  height: 40px;
-  padding: 7px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
-/* Remove product link */
-.cart-page-remove {
-  color: #999;
-}
-
-/* Empty cart table message */
-.cart-empty-cell {
-  padding: 35px !important;
-  text-align: center !important;
-}
-
-/* Empty cart link */
-.cart-empty-cell a {
-  color: #07803a;
-}
-
-/* =========================================
-   15. CART ACTIONS AND COUPON
-   ========================================= */
-
-/* Cart action buttons row */
-.cart-actions-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 20px 16px;
-  border: 1px solid #ddd;
-  border-top: 0;
-}
-
-/* Coupon input and button area */
-.coupon-area {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* Coupon input field */
-.coupon-area input {
-  width: 240px;
-  height: 42px;
-  padding: 9px 14px;
-  border: 1px solid #ddd;
-}
-
-/* Coupon error or message text */
-.coupon-area span {
-  color: #b42318;
-  font-size: 14px;
-}
-
-/* Update cart button appearance */
-.update-cart-button {
-  opacity: 0.58;
-}
-
-/* =========================================
-   16. CART TOTALS AND CHECKOUT BUTTON
-   ========================================= */
-
-/* Cart totals container */
-.cart-totals {
-  width: min(660px, 100%);
-  margin: 35px 0 0 auto;
-  border: 1px solid #ddd;
-}
-
-/* Cart totals heading */
-.cart-totals h2 {
-  font-size: 21px;
-  font-weight: 700;
-  padding: 17px 20px;
-  margin: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Cart totals content */
-.totals-inner {
-  padding: 22px;
-}
-
-/* Individual total row */
-.total-line {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 16px;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Total row text */
-.total-line strong {
-  font-weight: 400;
-}
-
-/* Proceed to checkout link */
-.checkout-link {
-  margin-top: 24px;
-  padding: 20px;
-  border-radius: 40px;
-}
-
-/* =========================================
-   17. CHECKOUT PAGE AND COUPON
-   ========================================= */
-
-/* Checkout page maximum width */
-.checkout-page {
-  max-width: 1380px;
-}
-
-/* Checkout coupon notification */
 .checkout-coupon {
-  border-top: 3px solid #087b35;
-  background: #fafafa;
-  padding: 20px 25px;
-  margin-bottom: 38px;
-  color: #59615b;
+    padding: 20px 25px;
+    border-top: 3px solid #007a2e;
+    background: #f8f7f8;
+    margin-bottom: 35px;
+    font-size: 17px;
+    color: #444;
 }
 
-/* Checkout coupon link/button */
 .checkout-coupon button:not(.primary-button) {
-  border: 0;
-  padding: 0;
-  color: #07803a;
-  background: transparent;
+    border: none;
+    background: transparent;
+    color: #007a2e;
+    padding: 0;
+    font-size: 17px;
 }
 
-/* Checkout coupon input area */
-.checkout-coupon .coupon-area {
-  margin-top: 18px;
+.checkout-coupon button:not(.primary-button):hover {
+    color: #005f23;
 }
 
-/* Checkout error message */
+/* Coupon Input */
+
+.coupon-area {
+    margin-top: 20px;
+}
+
+.coupon-area input {
+    height: 44px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+/* Checkout Error */
+
 .checkout-error {
-  border-top: 3px solid #c71925;
-  background: #fafafa;
-  color: #59615b;
-  padding: 22px 25px;
-  margin: -10px 0 42px;
+    padding: 22px 25px;
+    background: #f8f7f8;
+    border-top: 3px solid #dc3545;
+    margin-bottom: 55px;
+    color: #444;
+    font-size: 17px;
 }
 
-/* Checkout error icon */
 .checkout-error i {
-  color: #c71925;
-  margin-right: 14px;
+    color: #dc3545;
+    margin-right: 12px;
 }
 
-/* =========================================
-   18. CHECKOUT BILLING FORM
-   ========================================= */
+/* Checkout Columns */
 
-/* Billing form section heading */
+.checkout-columns {
+    align-items: flex-start;
+}
+
+/* Section Headings */
+
 .form-section-title {
-  font-size: 22px;
-  font-weight: 700;
-  padding-bottom: 18px;
-  border-bottom: 1px solid #ddd;
-  margin: 0 0 26px;
+    font-size: 21px;
+    font-weight: 600;
+    color: #111;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 28px;
 }
 
-/* Checkout form labels */
-.checkout-columns label {
-  display: block;
-  font-weight: 700;
-  margin: 0 0 8px;
+/* Billing Labels */
+
+.checkout-page label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
 }
 
-/* Required field star */
-.checkout-columns label b {
-  color: #d71920;
+.checkout-page label b {
+    color: red;
 }
 
-/* Checkout form input, select and textarea */
-.checkout-columns input,
-.checkout-columns select,
-.checkout-columns textarea {
-  display: block;
-  width: 100%;
-  min-height: 49px;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 10px 14px;
-  color: #333;
+/* Billing Inputs */
+
+.checkout-page input,
+.checkout-page select,
+.checkout-page textarea {
+    width: 100%;
+    min-height: 49px;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
-/* Checkout textarea */
-.checkout-columns textarea {
-  min-height: 95px;
-  resize: vertical;
+.checkout-page input:focus,
+.checkout-page select:focus,
+.checkout-page textarea:focus {
+    border-color: #007a2e;
+    box-shadow: none;
 }
 
-/* Additional information section spacing */
+/* Additional Information */
+
 .additional-title {
-  margin-top: 28px;
+    margin-top: 55px;
 }
 
-/* =========================================
-   19. ORDER SUMMARY
-   ========================================= */
+.checkout-page textarea {
+    min-height: 85px;
+    resize: vertical;
+}
 
-/* Order summary box */
+/* Order Box */
+
 .order-box {
-  border: 1px solid #ddd;
-  padding: 28px 32px 30px;
+    border: 1px solid #ddd;
+    padding: 30px 35px 35px;
 }
 
-/* Order summary heading */
 .order-box h2 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 32px;
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: #111;
 }
 
-/* Order table heading and product rows */
-.order-head,
-.order-product-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 15px 0;
-  border-bottom: 1px solid #ddd;
+/* Order Table Heading */
+
+.order-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 5px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
 }
 
-/* Product price in order summary */
-.order-product-line strong {
-  font-weight: 400;
-  white-space: nowrap;
+/* Order Products */
+
+#checkoutOrderItems .order-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
 }
 
-/* Product quantity spacing */
-.order-quantity {
-  padding-left: 5px;
-}
+/* Payment Unavailable */
 
-/* =========================================
-   20. PAYMENT INFORMATION
-   ========================================= */
-
-/* Payment unavailable information box */
 .payment-unavailable {
-  display: flex;
-  gap: 18px;
-  border-top: 3px solid #087b35;
-  background: #fafafa;
-  padding: 20px 24px;
-  margin-top: 35px;
-  line-height: 1.9;
-  color: #59615b;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 20px 25px;
+    margin-top: 35px;
+    border-top: 3px solid #007a2e;
+    background: #f8f7f8;
+    color: #666;
+    font-size: 16px;
+    line-height: 2;
 }
 
-/* Payment information icon */
 .payment-unavailable i {
-  color: #087b35;
-  padding-top: 5px;
+    color: #007a2e;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
-/* Privacy policy text */
+/* Privacy Text */
+
 .privacy-copy {
-  margin: 28px 0 25px;
-  line-height: 1.8;
+    margin-top: 30px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #333;
 }
 
-/* Privacy policy link */
 .privacy-copy a {
-  color: #07803a;
+    color: #007a2e;
+    text-decoration: none;
 }
 
-/* Place order button */
+.privacy-copy a:hover {
+    text-decoration: underline;
+}
+
+/* Place Order Button */
+
+.full-width {
+    display: block;
+    width: 100%;
+}
+
 .place-order {
-  padding: 16px;
+    padding: 16px;
+    font-size: 17px;
 }
 
-/* Empty checkout message */
-.checkout-empty {
-  padding: 14px 0;
+/* Coupon Hidden Class */
+
+.d-none {
+    display: none !important;
 }
 
-/* Empty checkout link */
-.checkout-empty a {
-  color: #07803a;
+
+
+/* =====================================
+   CART BACKGROUND OVERLAY
+===================================== */
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.42);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 
-/* ============================= CONTACT SECTION  ============================= */
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =====================================
+   SHOPPING CART SIDEBAR
+===================================== */
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -600px;
+    width: 525px;
+    max-width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s ease;
+    box-shadow: -3px 0 15px rgba(0, 0, 0, 0.12);
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+
+/* =====================================
+   CART HEADER
+===================================== */
+
+.cart-header {
+    height: 63px;
+    min-height: 63px;
+    padding: 0 20px 0 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+}
+
+.cart-header h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    color: #111111;
+}
+
+
+/* CLOSE BUTTON */
+
+.cart-close {
+    width: 47px;
+    height: 47px;
+    border: 1px dotted #777777;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #111111;
+    font-size: 32px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-close:hover {
+    background: #f5f5f5;
+}
+
+
+/* =====================================
+   CART BODY
+===================================== */
+
+.cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 22px;
+}
+
+.empty-cart {
+    font-size: 15px;
+    color: #666666;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+/* CART PRODUCT ITEM */
+
+.cart-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.cart-item:first-child {
+    padding-top: 15px;
+}
+
+.cart-item img {
+    width: 67px;
+    height: 67px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+/* 
+.cart-item-details h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #111111;
+    margin: 7px 0 8px;
+} */
+
+.cart-item-details p {
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+}
+
+
+/* REMOVE PRODUCT BUTTON */
+
+.remove-cart-item {
+    width: 23px;
+    height: 23px;
+    border: 1px solid #aaaaaa;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #999999;
+    font-size: 17px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.remove-cart-item:hover {
+    color: #000000;
+    border-color: #333333;
+}
+
+
+/* =====================================
+   CART FOOTER
+===================================== */
+
+.cart-footer {
+    width: 100%;
+    flex-shrink: 0;
+    background: #ffffff;
+}
+
+
+/* SUBTOTAL ROW */
+
+.subtotal-row {
+    height: 55px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.subtotal-row strong:first-child {
+    font-size: 17px;
+    font-weight: 500;
+    color: #111111;
+}
+
+.subtotal-row strong:last-child {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+}
+
+
+/* =====================================
+   CART BUTTONS
+===================================== */
+
+.cart-footer .primary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 44px);
+    height: 50px;
+    margin: 22px 22px 0;
+    border: none;
+    border-radius: 30px;
+    background: #00802b;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-footer .primary-button:last-child {
+    margin-top: 17px;
+    margin-bottom: 22px;
+}
+
+.cart-footer .primary-button:hover {
+    background: #006b24;
+    color: #ffffff;
+}
+
+
+/* =====================================
+   CART PAGE
+===================================== */
+
+.shop-page {
+    padding : 65px 11% 80px;
+    background-color: #f5f9f6;
+}
+
+.shop-page h1 {
+    font-size: 34px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   CART TABLE
+===================================== */
+
+.cart-table-wrap {
+    width: 100%;
+    border: 1px solid #dddddd;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.cart-table th {
+    background-color: #fafafa;
+    color: #252525;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 17px 10px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+.cart-table td {
+    padding: 12px 0px 12px 20px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    color: #28343e;
+    font-size: 17px;
+}
+
+/* Product Image */
+
+.cart-table td img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+    margin: auto 0px;
+}
+
+/* Product Name */
+
+.cart-table td a {
+    color: #00802f;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.cart-table td a:hover {
+    color: #006b27;
+}
+
+/* Remove Product Button */
+
+.cart-table td button {
+    border: 1px solid #aaaaaa;
+    background: transparent;
+    color: #999999;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 17px;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.cart-table td button:hover {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Quantity Input */
+
+.cart-table input[type="number"] {
+    width: 63px;
+    height: 40px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    outline: none;
+    font-size: 16px;
+}
+
+
+/* =====================================
+   CART ACTIONS / COUPON
+===================================== */
+
+.cart-actions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 16px;
+    border: 1px solid #dddddd;
+    border-top: none;
+}
+
+.coupon-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.coupon-area input {
+    width: 240px;
+    height: 41px;
+    padding: 10px 14px;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.coupon-area input:focus {
+    border-color: #00802f;
+}
+
+.primary-button {
+    display: inline-block;
+    background-color: #00802f;
+    color: #fff;
+    padding: 12px 19px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #006b27;
+    color: #fff;
+}
+
+/* Coupon Message */
+
+#cartCouponMessage {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Update Cart Button */
+
+.update-cart-button {
+    background-color: #80b895;
+    padding: 12px 19px;
+}
+
+.update-cart-button:hover {
+    background-color: #00802f;
+}
+
+
+/* =====================================
+   CART TOTALS
+===================================== */
+
+.cart-totals {
+    width: 48%;
+    margin: 35px 0 0 auto;
+    border: 1px solid #dddddd;
+}
+
+/* Cart Totals Heading */
+
+.cart-totals h2 {
+    font-size: 21px;
+    font-weight: 600;
+    color: #111;
+    background-color: #fafafa;
+    padding: 16px 20px;
+    margin: 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Cart Totals Inner */
+
+.totals-inner {
+    padding: 22px 23px 35px;
+}
+
+/* Subtotal and Total Rows */
+
+.total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 16px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 17px;
+    color: #28343e;
+}
+
+.total-line strong {
+    font-weight: 400;
+}
+
+/* Checkout Button */
+
+.checkout-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 24px;
+    padding: 22px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+
+/* =====================================
+   EMPTY CART
+===================================== */
+
+.empty-cart {
+    text-align: center;
+    padding: 30px;
+    font-size: 17px;
+}
+
+
+/* =====================================
+   CART SIDEBAR
+===================================== */
+
+.cart-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.cart-body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+
+/* ================= CONTACT SECTION ================= */
 
 .contact-section {
-  min-height: 100vh;
-  padding: 140px 0 110px;
-  background-color: #f7faf8;
+    background-color: #f5f9f6;
+    padding: 100px 13% 110px;
+    font-family: Arial, sans-serif;
+    color: #111;
 }
 
-/* ------------------ FORM BOX --------------------- */
+/* ================= LEFT SIDE ================= */
+
+.contact-left {
+    padding-top: 32px;
+}
+
+.contact-line {
+    width: 50px;
+    height: 1.5px;
+    background-color: #111;
+    margin-bottom: 35px;
+}
+
+.contact-title {
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #080808;
+}
+
+.contact-address {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #202c35;
+}
+
+.contact-phone {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 55px;
+    color: #202c35;
+}
+
+.contact-email {
+    font-size: 17px;
+    margin-bottom: 24px;
+    color: #202c35;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.social-icon a {
+    color: #333;
+    font-size: 23px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: #00802f;
+}
+
+
+/* ================= CONTACT FORM BOX ================= */
 
 .contact-form-box {
-  background-color: #f9fbfa;
-  padding: 60px 65px;
-  margin-left: 35px;
-  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.035);
+    background-color: #f8faf8;
+    padding: 56px 55px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.035);
 }
 
-/* ------------------ INPUTS --------------------- */
+
+/* ================= FORM LABEL ================= */
+
+.contact-form-box .form-label {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 9px;
+}
+
+.contact-form-box .form-label span,
+.reminder-label span {
+    color: #dc3545;
+}
+
+
+/* ================= INPUT FIELDS ================= */
 
 .contact-form-box .form-control {
-  height: 51px;
-  border: 1px solid #b8bebc;
-  border-radius: 6px;
-  background-color: transparent;
-  font-size: 16px;
-  padding: 12px 14px;
+    background-color: #f0f3f1;
+    border: 1px solid #bfc5c1;
+    border-radius: 8px;
+    height: 50px;
+    padding: 10px 14px;
+    font-size: 17px;
+    color: #111;
+    box-shadow: none;
 }
 
-.form-message {
-  text-align: center;
-  padding: 30px 10px;
+.contact-form-box .form-control:focus {
+    background-color: #f0f3f1;
+    border-color: #00802f;
+    box-shadow: 0 0 0 2px rgba(0, 128, 47, 0.08);
 }
+
+
+/* ================= MESSAGE TEXTAREA ================= */
+
+.contact-form-box textarea.form-control {
+    height: 131px;
+    resize: vertical;
+}
+
+
+/* ================= REMINDER SECTION ================= */
+
+.reminder-label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.reminder-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 53px;
+    padding: 10px 14px;
+    background-color: #f0f3f1;
+    border: 1px solid #bfc5c1;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reminder-box:hover {
+    border-color: #00802f;
+}
+
+.reminder-box input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #00802f;
+}
+
+
+/* ================= SUBMIT BUTTON ================= */
+
+.submit-btn {
+    background-color: #00802f !important;
+    border: 1px solid #00802f !important;
+    border-radius: 7px;
+    padding: 12px 18px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #006b27 !important;
+    border-color: #006b27 !important;
+}
+
+
+/* ================= SUCCESS MESSAGE ================= */
 
 .success-content {
-  align-items: center;
-  padding-left: 30px;
+    text-align: center;
+    padding: 100px 20px;
 }
+
 .success-content i {
-  font-size: 35px;
-  color: #00b84a;
-  padding-left: 300px;
+    font-size: 55px;
+    color: #00802f;
 }
 
 .success-content h3 {
-  font-size: 25px;
-  color: #000;
-  font-weight: 600;
-  margin: 0px 0px 30px;
-  padding-left: 250px;
+    font-size: 32px;
+    margin-top: 20px;
 }
 
 .success-content p {
-  font-size: 17px;
-  color: var(--greyshade-clr);
-  line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
 }
+

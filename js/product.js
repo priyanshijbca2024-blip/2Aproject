@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
               <div class="cart-item-info">
 
-                <h3>${escapeHTML(item.title)}</h3>
+                <h6>${escapeHTML(item.title)}</h6>
 
                 <p>${quantity} × £${price.toFixed(2)}</p>
 
@@ -603,13 +603,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                   <div class="product-card-content">
 
-                    <!-- Product Category -->
-                    <span class="category-label">
-                      ${escapeHTML(product.category)}
-                    </span>
+                   
 
                     <!-- Product Name -->
-                    <h2>${escapeHTML(product.title)}</h2>
+                    <span>${escapeHTML(product.title)}</span>
 
                     <!-- Product Price -->
                     <p class="card-price">
